@@ -1,7 +1,9 @@
 "use client";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider } from "@chakra-ui/react";
-import customTheme from "@/styles/theme";
+import customTheme from "@/theme/index";
+import "./global.scss";
+import "focus-visible/dist/focus-visible";
 
 export default function RootLayout({ children }) {
   return (

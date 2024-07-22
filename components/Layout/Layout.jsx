@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 // import styles from "@modules/Layout/Layout.module.scss";
 // className={styles.main}
 
@@ -18,7 +18,9 @@ const Layout = ({ pageTitle, children }) => {
       </Head> */}
       <Flex direction={"column"} minH="100vh">
         <Header />
-        <main>{children}</main>
+        <Box as="main" width="100%" gap="2rem" display={"flex"} flexDir={"column"}>
+          {children}
+        </Box>
         <Footer />
       </Flex>
     </>
