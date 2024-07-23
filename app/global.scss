@@ -12,6 +12,18 @@
   white-space: nowrap !important;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 6px;
+}
+
+.skip-link:focus {
+  position: static;
+  left: 0;
+  top: 0;
+}
 // Navbar
 * {
   margin: 0;

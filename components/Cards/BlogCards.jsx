@@ -29,7 +29,7 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
           <Text variant="blue">{text}</Text>
         </Stack>
         <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
-          <Avatar src="/avatar.png" />
+          <Avatar src="/avatar.png" name="" />
           <Stack direction={"column"} spacing={0} fontSize={"sm"}>
             <Text>Federico Silva</Text>
             <Text>Jul 22, 2024 · 6min read</Text>
