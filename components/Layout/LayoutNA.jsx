@@ -1,29 +1,22 @@
+"use client";
+
 import React from "react";
-import Head from "next/head";
-import { Flex, Box } from "@chakra-ui/react";
-// import styles from "@modules/Layout/Layout.module.scss";
-// className={styles.main}
+import { Flex } from "@chakra-ui/react";
 
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ pageTitle, children }) => {
+const LayoutNA = ({ children }) => {
   return (
     <>
-      {/* <Head>
-        <title>{pageTitle}</title>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      </Head> */}
-      <Flex direction={"column"} minH="100vh">
+      <Flex direction="column" minH="100vh">
         <Header />
-        <Box as="main" id="main" width="100%" gap="2rem" display={"flex"} flexDir={"column"}>
+        <Flex as="main" id="main" gap="2rem">
           {children}
-        </Box>
+        </Flex>
         <Footer />
       </Flex>
     </>
   );
 };
-export default Layout;
+export default LayoutNA;

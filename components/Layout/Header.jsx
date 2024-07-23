@@ -1,13 +1,14 @@
 "use client";
-import MobileNav from "./Navbar/MobileNav";
-import Navbar from "./Navbar/Navbar";
-import { Button, Link, Image } from "@chakra-ui/react";
-// import { Link } from "react-router-dom";
 
-const Header = () => {
+import { Link, Image } from "@chakra-ui/react";
+
+import Navbar from "./Navbar/Navbar";
+import MobileNav from "./Navbar/MobileNav";
+
+export default function Header() {
   return (
     <header>
-      <Link className="skip-link" href="#main">
+      <Link id="skip-link" href="#main">
         Skip to main content
       </Link>
       <div className="nav-area">
@@ -19,6 +20,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

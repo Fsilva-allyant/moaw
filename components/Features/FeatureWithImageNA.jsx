@@ -27,7 +27,7 @@ const Feature = ({ text, icon, iconBg }) => {
   );
 };
 
-export default function FeatureWithImage() {
+export default function FeatureWithImageNA() {
   return (
     <Container maxW="90%" p="0.75rem">
       <SimpleGrid columns={["1", "2"]} spacing="2.5rem">

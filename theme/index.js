@@ -64,14 +64,14 @@ const customTheme = extendTheme({
     },
   },
 
-  // breakpoints: {
-  //   base: "0px",
-  //   sm: "863px",
-  //   md: "1440px",
-  //   lg: "62em", // ~992px
-  //   xl: "80em", // ~1280px
-  //   "2xl": "1536px", // ~1536px
-  // },
+  breakpoints: {
+    base: "0px",
+    sm: "863px",
+    md: "1440px",
+    lg: "62em", // ~992px
+    xl: "80em", // ~1280px
+    "2xl": "1536px", // ~1536px
+  },
 
   colors: {
     blue: {
@@ -81,6 +81,11 @@ const customTheme = extendTheme({
       opacity: "#4E10E01A",
     },
     white: "#FFFFFF",
+    gray: {
+      bold: "#A0AEC0",
+      base: "#CBD5E0",
+      light: "#E2E8F0",
+    },
   },
   fonts: {
     body: `Roboto, ${chakraTheme.fonts?.body}`,

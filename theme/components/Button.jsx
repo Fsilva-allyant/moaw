@@ -25,6 +25,19 @@ const Button = defineStyleConfig({
         color: "white",
       },
     },
+    social: {
+      color: "white",
+      bg: "blue.bold",
+      display: "inline-flex",
+      justifyContent: "center",
+      alignItems: "center",
+      transition: "background 0.3s ease",
+      _focus: { outline: "3px solid white", outlineOffset: "2px" },
+      _hover: {
+        bg: "white",
+        color: "blue.bold",
+      },
+    },
   },
 });
 

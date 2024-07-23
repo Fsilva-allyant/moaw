@@ -28,7 +28,7 @@ const Feature = ({ title, text, icon }) => {
   );
 };
 
-export default function FeatureCards() {
+export default function FeatureCardsNA() {
   return (
     <VStack maxW="90%" m="auto" p="0 0.75rem 0" spacing="1rem">
       <Heading as="h2" variant="blue" size="h2" paddingBottom="2rem 0">
