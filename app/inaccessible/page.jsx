@@ -1,11 +1,11 @@
 import "../global.scss";
 
-import Layout from "@/components/Layout/LayoutNA";
-import HeroBanner from "@/components/Hero/HeroBannerNA";
-import FeatureCards from "@/components/Features/FeatureCardsNA";
-import FeatureWithImage from "@/components/Features/FeatureWithImageNA";
-import BlogCards from "@/components/Cards/BlogCardsNA";
-import HeroFooter from "@/components/Hero/HeroFooterNA";
+import LayoutNA from "@/components/Layout/LayoutNA";
+import HeroBannerNA from "@/components/Hero/HeroBannerNA";
+import FeatureCardsNA from "@/components/Features/FeatureCardsNA";
+import FeatureWithImageNA from "@/components/Features/FeatureWithImageNA";
+import BlogCardsNA from "@/components/Cards/BlogCardsNA";
+import HeroFooterNA from "@/components/Hero/HeroFooterNA";
 
 export const metadata = {
   title: "Museum of Accessibility Woes - Not Accessible Version",
@@ -15,13 +15,13 @@ export const metadata = {
 
 const Index = () => {
   return (
-    <Layout>
-      <HeroBanner />
-      <FeatureCards />
-      <FeatureWithImage />
-      <BlogCards />
-      <HeroFooter />
-    </Layout>
+    <LayoutNA>
+      <HeroBannerNA />
+      <FeatureCardsNA />
+      <FeatureWithImageNA />
+      <BlogCardsNA />
+      <HeroFooterNA />
+    </LayoutNA>
   );
 };
 

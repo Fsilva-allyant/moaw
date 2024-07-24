@@ -41,8 +41,8 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
 
 export default function BlogCards() {
   return (
-    <VStack spacing={15} maxW="90%" m="auto" p="0 0.625rem">
-      <Heading as="h2" variant="blue" size="h2" padding="2.5rem 0">
+    <VStack spacing={15} maxW="90%" m="auto" p="0 0.625rem 0">
+      <Heading as="h2" variant="blue" size="h2" paddingBottom="2rem">
         Our Blog
       </Heading>
       <SimpleGrid columns={[1, 3]} spacing={10}>

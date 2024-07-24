@@ -5,7 +5,7 @@ import { HiLightBulb } from "react-icons/hi";
 
 const Feature = ({ title, text, icon }) => {
   return (
-    <Stack>
+    <Stack alignItems={["center", "start"]} textAlign={["center", "start"]}>
       <Flex
         color="white"
         rounded="full"
@@ -21,7 +21,7 @@ const Feature = ({ title, text, icon }) => {
       <Heading as="h3" size="h3" variant="blue">
         {title}
       </Heading>
-      <Text size="sm" variant="blue">
+      <Text size="sm" variant="blue" maxW={["50%", "100%"]}>
         {text}
       </Text>
     </Stack>
@@ -31,22 +31,22 @@ const Feature = ({ title, text, icon }) => {
 export default function FeatureCards() {
   return (
     <VStack maxW="90%" m="auto" p="0 0.75rem 0" spacing="1rem">
-      <Heading as="h2" variant="blue" size="h2" paddingBottom="2rem 0">
+      <Heading as="h2" variant="blue" size="h2" paddingBottom="2rem">
         What can we use this for?
       </Heading>
       <SimpleGrid columns={[1, 3]} spacing="2.5rem">
         <Feature
-          icon={<Icon aria-hidden="true" as={HiLightBulb} color={"blue.base"} w="4rem" h="4rem" />}
+          icon={<Icon aria-hidden="true" as={HiLightBulb} color="blue.base" w="4rem" h="4rem" />}
           title="Rissus Commodo"
           text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
         />
         <Feature
-          icon={<Icon aria-hidden="true" as={HiLightBulb} color={"blue.base"} w="4rem" h="4rem" />}
+          icon={<Icon aria-hidden="true" as={HiLightBulb} color="blue.base" w="4rem" h="4rem" />}
           title="Rissus Commodo"
           text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
         />
         <Feature
-          icon={<Icon aria-hidden="true" as={HiLightBulb} color={"blue.base"} w="4rem" h="4rem" />}
+          icon={<Icon aria-hidden="true" as={HiLightBulb} color="blue.base" w="4rem" h="4rem" />}
           title="Rissus Commodo"
           text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
         />

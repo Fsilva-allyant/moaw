@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+
 import MobileDropdown from "./MobileDropdown";
 
 const MobileMenuItems = ({ items, depthLevel, showMenu, setShowMenu }) => {
@@ -20,7 +20,7 @@ const MobileMenuItems = ({ items, depthLevel, showMenu, setShowMenu }) => {
     <li className="menu-items" onClick={closeDropdown}>
       {items.url && items.submenu ? (
         <>
-          <button type="button" aria-haspopup="menu" aria-expanded={dropdown ? "true" : "false"}>
+          <button type="button" aria-expanded={dropdown ? "true" : "false"}>
             <a to={items.url} onClick={closeDropdown}>
               {items.title}
             </a>
@@ -32,7 +32,7 @@ const MobileMenuItems = ({ items, depthLevel, showMenu, setShowMenu }) => {
         </>
       ) : !items.url && items.submenu ? (
         <>
-          <button type="button" aria-haspopup="menu" aria-expanded={dropdown ? "true" : "false"}>
+          <button type="button" aria-expanded={dropdown ? "true" : "false"}>
             {items.title}{" "}
             <div onClick={(e) => toggleDropdown(e)}>
               {dropdown ? <span className="arrow-close" /> : <span className="arrow" />}

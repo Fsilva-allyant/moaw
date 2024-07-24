@@ -1,8 +1,9 @@
 "use client";
-import Dropdown from "./Dropdown";
 import { useState, useEffect, useRef } from "react";
 
-const MenuItems = ({ items, depthLevel }) => {
+import DropdownNA from "./DropdownNA";
+
+const MenuItemsNA = ({ items, depthLevel }) => {
   const [dropdown, setDropdown] = useState(false);
   let ref = useRef();
 
@@ -56,7 +57,7 @@ const MenuItems = ({ items, depthLevel }) => {
             <span>{items.title}</span>
             {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
           </button>
-          <Dropdown depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
+          <DropdownNA depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : !items.url && items.submenu ? (
         <>
@@ -68,7 +69,7 @@ const MenuItems = ({ items, depthLevel }) => {
             {items.title}
             {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
           </button>
-          <Dropdown depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
+          <DropdownNA depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : (
         <a href={items.url}>{items.title}</a>
@@ -77,4 +78,4 @@ const MenuItems = ({ items, depthLevel }) => {
   );
 };
 
-export default MenuItems;
+export default MenuItemsNA;

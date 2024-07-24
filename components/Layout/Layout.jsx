@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     <>
       <Flex direction="column" minH="100vh">
         <Header />
-        <Flex as="main" id="main" gap="2rem">
+        <Flex as="main" id="main" gap="4rem">
           {children}
         </Flex>
         <Footer />

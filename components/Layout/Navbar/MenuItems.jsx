@@ -1,6 +1,7 @@
 "use client";
-import Dropdown from "./Dropdown";
 import { useState, useEffect, useRef } from "react";
+
+import Dropdown from "./Dropdown";
 
 const MenuItems = ({ items, depthLevel }) => {
   const [dropdown, setDropdown] = useState(false);

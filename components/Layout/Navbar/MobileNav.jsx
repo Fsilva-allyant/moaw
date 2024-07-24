@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+
 import { menuItemsData } from "@/common/menuItemsData";
 import MobileMenuItems from "./MobileMenuItems";
 
-const MobileNav = () => {
+export default function MobileNav() {
   const depthLevel = 0;
   const [showMenu, setShowMenu] = useState(false);
   let ref = useRef();
@@ -50,6 +51,4 @@ const MobileNav = () => {
       )}
     </nav>
   );
-};
-
-export default MobileNav;
+}

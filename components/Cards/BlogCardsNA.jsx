@@ -16,7 +16,7 @@ import {
 const BlogPost = ({ title, text, tag, imgSrc }) => {
   return (
     <Center>
-      <Box maxW={"445px"} w={"full"} boxShadow={"2xl"} rounded={"md"} p={6} overflow={"hidden"}>
+      <Box maxW={"90%"} w={"full"} boxShadow={"2xl"} rounded={"md"} p={6} overflow={"hidden"}>
         <Box h={"210px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
           <Image src={`/${imgSrc}`} fill alt="" />
         </Box>
@@ -39,13 +39,13 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
   );
 };
 
-export default function BlogCards() {
+export default function BlogCardsNA() {
   return (
-    <VStack p={4} spacing={15}>
-      <Heading as="h2" variant="blue" size="h2" padding="2.5rem 0">
+    <VStack spacing={15} maxW="90%" m="auto" p="0 0.625rem 0">
+      <Heading as="h2" variant="blue" size="h2" paddingBottom="2rem">
         Our Blog
       </Heading>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} maxW="90%" m="auto" p="0px 0px">
+      <SimpleGrid columns={[1, 3]} spacing={10}>
         <BlogPost
           title={"Rissus Commodo"}
           text={

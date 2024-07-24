@@ -4,7 +4,7 @@ import { Button } from "@chakra-ui/react";
 import MenuItems from "./MenuItems";
 import { menuItemsData } from "@/common/menuItemsData";
 
-const Navbar = () => {
+export default function Navbar() {
   const depthLevel = 0;
   return (
     <nav className="desktop-nav">
@@ -18,6 +18,4 @@ const Navbar = () => {
       </Button>
     </nav>
   );
-};
-
-export default Navbar;
+}

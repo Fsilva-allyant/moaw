@@ -14,13 +14,13 @@ import {
 } from "@chakra-ui/react";
 
 // Icon props are unused unless it's decided to use icons
-const Feature = ({ text, icon, iconBg }) => {
+const Feature = ({ text, href, icon, iconBg }) => {
   return (
     <Stack as="li" direction="row" align="center">
       {/* <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
         {icon}
       </Flex> */}
-      <Link href="#">
+      <Link href={href}>
         <Text variant="link">{text}</Text>
       </Link>
     </Stack>
@@ -29,7 +29,7 @@ const Feature = ({ text, icon, iconBg }) => {
 
 export default function FeatureWithImage() {
   return (
-    <Container maxW="90%" p="0.75rem">
+    <Container maxW="90%" p="0.75rem" className="main-index">
       <SimpleGrid columns={["1", "2"]} spacing="2.5rem">
         <Stack spacing="1rem">
           <Text variant="tag">Our Lab</Text>
@@ -46,16 +46,23 @@ export default function FeatureWithImage() {
             py="1rem"
             divider={<StackDivider borderColor="gray.light" />}
           >
-            <Feature icon={<Icon as="" w="1.25rem" h="1.25rem" />} iconBg="" text="Index" />
+            <Feature
+              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              iconBg=""
+              text="Index"
+              href="/"
+            />
             <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Accessible Site"
+              href="/accessible"
             />
             <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Inaccessible Site"
+              href="/inaccessible"
             />
           </Stack>
         </Stack>
