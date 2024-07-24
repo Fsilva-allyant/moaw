@@ -27,9 +27,9 @@ const Feature = ({ text, href, icon, iconBg }) => {
   );
 };
 
-export default function FeatureWithImageNA() {
+export default function IndexPage() {
   return (
-    <Container maxW="90%" p="0.75rem">
+    <Container maxW="90%" p="0.75rem" className="main-index">
       <SimpleGrid columns={["1", "2"]} spacing="2.5rem">
         <Stack spacing="1rem">
           <Text variant="tag">Our Lab</Text>

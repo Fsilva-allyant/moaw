@@ -1,6 +1,5 @@
 import "./global.scss";
-
-import FeatureWithImage from "@/components/Features/FeatureWithImage";
+import IndexPage from "@/components/IndexPage";
 
 export const metadata = {
   title: "Museum of Accessibility Woes",
@@ -11,7 +10,7 @@ export const metadata = {
 const Index = () => {
   return (
     <main id="main-index">
-      <FeatureWithImage />
+      <IndexPage />
     </main>
   );
 };

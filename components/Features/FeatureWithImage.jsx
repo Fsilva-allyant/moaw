@@ -29,7 +29,7 @@ const Feature = ({ text, href, icon, iconBg }) => {
 
 export default function FeatureWithImage() {
   return (
-    <Container maxW="90%" p="0.75rem" className="main-index">
+    <Container maxW="90%" p="0.75rem">
       <SimpleGrid columns={["1", "2"]} spacing="2.5rem">
         <Stack spacing="1rem">
           <Text variant="tag">Our Lab</Text>
