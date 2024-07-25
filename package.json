@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "devIP": "next dev -H 192.168.0.174",
-    "export": "next export",
-    "serve": "serve out",
     "build": "next build",
-    "copy": "mv ./.next/static ./.next/standalone/; cp -r ./public ./.next/standalone/",
-    "cleanup": "rm -r node_modules",
     "start": "next start",
     "lint": "next lint"
   },
