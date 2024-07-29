@@ -50,7 +50,7 @@ export default function IndexPage() {
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Index"
-              href="/"
+              href="/index.html"
             />
             <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
