@@ -56,13 +56,13 @@ export default function IndexPage() {
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Accessible Site"
-              href="labs.allyant.com/accessible"
+              href="/accessible.html"
             />
             <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Inaccessible Site"
-              href="labs.allyant.com/inaccessible"
+              href="/inaccessible.html"
             />
           </Stack>
         </Stack>
