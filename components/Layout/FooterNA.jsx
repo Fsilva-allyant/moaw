@@ -4,6 +4,8 @@ import { Box, Button, Stack, Text, VisuallyHidden, Link, Image } from "@chakra-u
 
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
+import prodUrl from "@/common/prodUrl";
+
 const SocialButton = ({ children, label, href }) => {
   return (
     <Button as="a" href={href} variant="social">
@@ -25,7 +27,7 @@ export default function FooterNA() {
         py="1rem"
         spacing="1rem" //mobile
       >
-        <Link href="/">
+        <Link href={prodUrl("/accessible")}>
           <Image src="/moaw_light.png" alt="Museum of Accessibility Woes" />
         </Link>
         <Text variant="white">© 2024 Allyant. All rights reserved</Text>

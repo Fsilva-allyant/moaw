@@ -5,6 +5,8 @@ import { Link, Image } from "@chakra-ui/react";
 import Navbar from "./Navbar/Navbar";
 import MobileNav from "./Navbar/MobileNav";
 
+import prodUrl from "@/common/prodUrl";
+
 export default function Header() {
   return (
     <header>
@@ -12,7 +14,7 @@ export default function Header() {
         Skip to main content
       </Link>
       <div className="nav-area">
-        <Link href="/">
+        <Link href={prodUrl("/accessible")}>
           <Image src="/moaw_dark.png" alt="Museum of Accessibility Woes" />
         </Link>
         <Navbar />

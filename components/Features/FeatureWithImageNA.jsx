@@ -13,6 +13,8 @@ import {
   Link,
 } from "@chakra-ui/react";
 
+import prodUrl from "@/common/prodUrl";
+
 // Icon props are unused unless it's decided to use icons
 const Feature = ({ text, href, icon, iconBg }) => {
   return (
@@ -20,7 +22,7 @@ const Feature = ({ text, href, icon, iconBg }) => {
       {/* <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
         {icon}
       </Flex> */}
-      <Link href={href}>
+      <Link href={prodUrl(href)}>
         <Text variant="link">{text}</Text>
       </Link>
     </Stack>

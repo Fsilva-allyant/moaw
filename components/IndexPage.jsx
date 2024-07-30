@@ -13,6 +13,8 @@ import {
   Link,
 } from "@chakra-ui/react";
 
+import prodUrl from "@/common/prodUrl";
+
 // Icon props are unused unless it's decided to use icons
 const Feature = ({ text, href, icon, iconBg }) => {
   return (
@@ -56,13 +58,13 @@ export default function IndexPage() {
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Accessible Site"
-              href="/accessible.html"
+              href={prodUrl("/accessible")}
             />
             <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Inaccessible Site"
-              href="/inaccessible.html"
+              href={prodUrl("/inaccessible")}
             />
           </Stack>
         </Stack>

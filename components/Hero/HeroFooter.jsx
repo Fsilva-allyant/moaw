@@ -2,6 +2,8 @@
 
 import { Button, Flex, Heading, Image, Stack, Text, Box } from "@chakra-ui/react";
 
+import prodUrl from "@/common/prodUrl";
+
 export default function HeroFooter() {
   return (
     <Box maxWidth="100%" bgColor="blue.base">
@@ -16,10 +18,17 @@ export default function HeroFooter() {
               voluptatum.
             </Text>
             <Stack direction={["column", "row"]} spacing="1rem">
-              <Button variant="white" _focus={{ outline: "3px solid white", outlineOffset: "2px" }}>
+              <Button
+                as="a"
+                href={prodUrl("/accessible")}
+                variant="white"
+                _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+              >
                 Accessible
               </Button>
               <Button
+                as="a"
+                href={prodUrl("/inaccessible")}
                 variant="blue"
                 border="3px solid white"
                 _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
