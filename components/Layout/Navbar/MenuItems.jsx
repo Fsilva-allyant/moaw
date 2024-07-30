@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 
 import Dropdown from "./Dropdown";
 
+import prodUrl from "@/common/prodUrl";
+
 const MenuItems = ({ items, depthLevel }) => {
   const [dropdown, setDropdown] = useState(false);
   let ref = useRef();
@@ -72,7 +74,7 @@ const MenuItems = ({ items, depthLevel }) => {
           <Dropdown depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : (
-        <a href={items.url}>{items.title}</a>
+        <a href={prodUrl(`${items.url}`)}>{items.title}</a>
       )}
     </li>
   );
