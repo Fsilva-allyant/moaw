@@ -46,12 +46,12 @@ export default function IndexPage() {
             py="1rem"
             divider={<StackDivider borderColor="gray.light" />}
           >
-            <Feature
+            {/* <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Index"
               href="/index.html"
-            />
+            /> */}
             <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
