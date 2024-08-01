@@ -10,12 +10,12 @@ import prodUrl from "@/common/prodUrl";
 export default function HeaderNA() {
   return (
     <header>
-      <Link id="skip-link" href="#main">
+      <Link display="none" href="#main">
         Skip to main content
       </Link>
       <div className="nav-area">
         <Link href={prodUrl("/inaccessible")}>
-          <Image src="/moaw_dark.png" alt="Museum of Accessibility Woes" />
+          <Image src="/moaw_dark.png" alt="company logo" />
         </Link>
         <NavbarNA />
         <MobileNavNA />
