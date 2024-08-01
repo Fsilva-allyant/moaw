@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   Box,
   Center,
@@ -10,20 +11,30 @@ import {
   Avatar,
   VStack,
   SimpleGrid,
+
   // Image,
 } from "@chakra-ui/react";
 
 const BlogPost = ({ title, text, tag, imgSrc }) => {
   return (
-    <Center>
-      <Box maxW={"90%"} w={"full"} boxShadow={"2xl"} rounded={"md"} p={6} overflow={"hidden"}>
+    <Center as="li">
+      <Box
+        role="group"
+        aria-label="blog"
+        maxW={"90%"}
+        w={"full"}
+        boxShadow={"2xl"}
+        rounded={"md"}
+        p={6}
+        overflow={"hidden"}
+      >
         <Box h={"210px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
           <Image src={`/${imgSrc}`} fill alt="" />
         </Box>
         <Stack>
           <Text variant="tag">{tag}</Text>
           <Heading as="h3" size="h3">
-            {title}
+            <Link href="#">{title}</Link>
           </Heading>
           <Text variant="blue">{text}</Text>
         </Stack>
@@ -45,7 +56,7 @@ export default function BlogCards() {
       <Heading as="h2" variant="blue" size="h2" paddingBottom="2rem">
         Our Blog
       </Heading>
-      <SimpleGrid columns={[1, 3]} spacing={10}>
+      <SimpleGrid as="ul" columns={[1, 3]} spacing={10}>
         <BlogPost
           title={"Rissus Commodo"}
           text={

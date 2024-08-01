@@ -1,5 +1,7 @@
 import "../global.scss";
 
+import { Divider } from "@chakra-ui/react";
+
 import Layout from "@/components/Layout/Layout";
 import HeroBanner from "@/components/Hero/HeroBanner";
 import FeatureCards from "@/components/Features/FeatureCards";

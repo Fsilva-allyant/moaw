@@ -27,7 +27,10 @@ export default function FooterNA() {
         py="1rem"
         spacing="1rem" //mobile
       >
-        <Link href={prodUrl("/accessible")}>
+        <Link
+          _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+          href={prodUrl("/accessible")}
+        >
           <Image src="/moaw_light.png" alt="Museum of Accessibility Woes" />
         </Link>
         <Text variant="white">© 2024 Allyant. All rights reserved</Text>
