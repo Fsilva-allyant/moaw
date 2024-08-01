@@ -9,7 +9,7 @@ import prodUrl from "@/common/prodUrl";
 
 export default function HeaderNA() {
   return (
-    <header>
+    <div>
       <Link display="none" href="#main">
         Skip to main content
       </Link>
@@ -20,6 +20,6 @@ export default function HeaderNA() {
         <NavbarNA />
         <MobileNavNA />
       </div>
-    </header>
+    </div>
   );
 }
