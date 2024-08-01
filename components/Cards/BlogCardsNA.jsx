@@ -22,7 +22,7 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
         </Box>
         <Stack>
           <Text variant="tag">{tag}</Text>
-          <Heading as="h3" size="h3">
+          <Heading as="span" size="h3">
             {title}
           </Heading>
           <Text variant="blue">{text}</Text>

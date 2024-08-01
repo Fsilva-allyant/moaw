@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@chakra-ui/react";
 
-import MenuItems from "./MenuItems";
+import MenuItemsNA from "./MenuItemsNA";
 import { menuItemsData } from "@/common/menuItemsData";
 
 export default function NavbarNA() {
@@ -10,7 +10,7 @@ export default function NavbarNA() {
     <nav className="desktop-nav">
       <ul className="menus">
         {menuItemsData.map((menu, index) => {
-          return <MenuItems items={menu} key={index} depthLevel={depthLevel} />;
+          return <MenuItemsNA items={menu} key={index} depthLevel={depthLevel} />;
         })}
       </ul>
       <Button

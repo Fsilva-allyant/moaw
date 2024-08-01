@@ -50,12 +50,7 @@ const MenuItemsNA = ({ items, depthLevel }) => {
     >
       {items.url && items.submenu ? (
         <>
-          <button
-            type="button"
-            aria-expanded={dropdown ? "true" : "false"}
-            aria-controls="dropdown"
-            onClick={() => toggleDropdown()}
-          >
+          <button type="button" onClick={() => toggleDropdown()}>
             <span>{items.title}</span>
             {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
           </button>
@@ -63,11 +58,7 @@ const MenuItemsNA = ({ items, depthLevel }) => {
         </>
       ) : !items.url && items.submenu ? (
         <>
-          <button
-            type="button"
-            aria-controls="dropdown"
-            aria-expanded={dropdown ? "true" : "false"}
-          >
+          <button type="button">
             {items.title}
             {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
           </button>
