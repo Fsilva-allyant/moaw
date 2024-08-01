@@ -8,10 +8,12 @@ import prodUrl from "@/common/prodUrl";
 
 const SocialButton = ({ children, label, href }) => {
   return (
-    <Button as="a" href={href} variant="social">
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </Button>
+    <Box as="li">
+      <Button as="a" href={href} variant="social">
+        <VisuallyHidden>{label}</VisuallyHidden>
+        {children}
+      </Button>
+    </Box>
   );
 };
 
@@ -34,7 +36,7 @@ export default function Footer() {
           <Image src="/moaw_light.png" alt="Museum of Accessibility Woes" />
         </Link>
         <Text variant="white">© 2024 Allyant. All rights reserved</Text>
-        <Stack direction="row">
+        <Stack as="ul" direction="row">
           <SocialButton label="Instagram" href="#">
             <FaInstagram aria-hidden="true" />
           </SocialButton>

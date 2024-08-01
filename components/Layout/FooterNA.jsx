@@ -31,18 +31,18 @@ export default function FooterNA() {
           _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
           href={prodUrl("/accessible")}
         >
-          <Image src="/moaw_light.png" alt="Museum of Accessibility Woes" />
+          <Image src="/moaw_light.png" />
         </Link>
         <Text variant="white">© 2024 Allyant. All rights reserved</Text>
         <Stack direction="row">
           <SocialButton label="Instagram" href="#">
-            <FaInstagram aria-hidden="true" />
+            <FaInstagram />
           </SocialButton>
           <SocialButton label="LinkedIn" href="#">
-            <FaLinkedin aria-hidden="true" />
+            <FaLinkedin />
           </SocialButton>
           <SocialButton label="Twitter" href="#">
-            <FaTwitter aria-hidden="true" />
+            <FaTwitter />
           </SocialButton>
         </Stack>
       </Stack>
