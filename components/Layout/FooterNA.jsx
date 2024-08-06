@@ -8,7 +8,12 @@ import prodUrl from "@/common/prodUrl";
 
 const SocialButton = ({ children, label, href }) => {
   return (
-    <Button as="a" href={href} variant="social">
+    <Button
+      as="a"
+      href={href}
+      variant="social"
+      _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }}
+    >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </Button>
@@ -28,7 +33,7 @@ export default function FooterNA() {
         spacing="1rem" //mobile
       >
         <Link
-          _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+          _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }}
           href={prodUrl("/accessible")}
         >
           <Image src="/moaw_light.png" />

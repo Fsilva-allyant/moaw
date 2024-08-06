@@ -42,7 +42,7 @@ const MenuItemsNA = ({ items, depthLevel }) => {
 
   return (
     <li
-      className="menu-items"
+      className="menu-items menu-items-na"
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

@@ -97,6 +97,10 @@ header {
   text-decoration: none;
   outline: "#5510DD";
 }
+.menu-items-na,
+.menu-items-na a {
+  color: #0000007a !important;
+}
 
 .desktop-nav .menu-items button {
   display: flex;
