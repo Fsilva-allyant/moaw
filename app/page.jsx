@@ -4,7 +4,7 @@ import IndexPage from "@/components/IndexPage";
 export const metadata = {
   title: "Museum of Accessibility Woes",
   description: "TBD",
-  // icons: { icon: "/favicon.svg" },
+  icons: { icon: "/images/favicon.svg" },
 };
 
 const Index = () => {

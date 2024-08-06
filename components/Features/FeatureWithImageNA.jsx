@@ -15,15 +15,21 @@ import {
 
 import prodUrl from "@/common/prodUrl";
 
+import { FaCaretRight } from "react-icons/fa6";
+
 // Icon props are unused unless it's decided to use icons
 const Feature = ({ text, href, icon, iconBg }) => {
   return (
     <Stack direction="row" align="center">
-      {/* <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
+      <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
         {icon}
-      </Flex> */}
+      </Flex>
       <Link href={prodUrl(href)}>
-        <Text as="h3" variant="link">
+        <Text
+          as="h3"
+          variant="link"
+          _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
+        >
           {text}
         </Text>
       </Link>
@@ -46,19 +52,19 @@ export default function FeatureWithImageNA() {
           </Text>
           <Stack spacing="1rem" py="1rem" divider={<StackDivider borderColor="gray.light" />}>
             <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              icon={<Icon as={FaCaretRight} w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Index"
               href="/"
             />
             <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              icon={<Icon as={FaCaretRight} w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Accessible Site"
               href="/accessible"
             />
             <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              icon={<Icon as={FaCaretRight} w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Inaccessible Site"
               href="/inaccessible"
@@ -66,7 +72,13 @@ export default function FeatureWithImageNA() {
           </Stack>
         </Stack>
         <Flex>
-          <Image src="/stock.jpg" alt="/stock.jpg" rounded="md" objectFit="cover" />
+          <Image
+            className="white-mask"
+            src="/stock.jpg"
+            alt="/stock.jpg"
+            rounded="md"
+            objectFit="cover"
+          />
         </Flex>
       </SimpleGrid>
     </Container>

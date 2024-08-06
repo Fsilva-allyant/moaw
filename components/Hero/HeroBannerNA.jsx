@@ -12,9 +12,15 @@ export default function HeroBannerNA() {
       backgroundPosition="center center"
       backgroundColor="blue.bold"
     >
-      <VStack w="full" justify="center" px={["1rem", "2rem"]} bgColor="blue.base" opacity="0.9">
+      <VStack
+        w="full"
+        justify="center"
+        px={["1rem", "2rem"]}
+        bgColor="#6126eb82"
+        // opacity="0.5"
+      >
         <Stack maxW="50%" align="flex-start" spacing="2rem" textAlign="center">
-          <Heading as="span" size={["h2", "h1"]} variant="white">
+          <Heading as="span" size={["h2", "h1"]} variant="white" textShadow={"2px 2px 3px #00244b"}>
             Let&apos;s improve the usability of our empathy
           </Heading>
           <ul>
@@ -26,7 +32,7 @@ export default function HeroBannerNA() {
           <Button
             as="a"
             variant="white"
-            size={["md", "lg"]}
+            size={["md"]}
             _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
             aria-label="Contact Us"
           >

@@ -13,16 +13,21 @@ import {
   Link,
 } from "@chakra-ui/react";
 
+import { FaCaretRight } from "react-icons/fa6";
+
 import prodUrl from "@/common/prodUrl";
 
 // Icon props are unused unless it's decided to use icons
-const Feature = ({ text, href, icon, iconBg }) => {
+const Feature = ({ text, href, icon, iconBg, content }) => {
   return (
-    <Stack as="li" direction="row" align="center">
-      {/* <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
+    <Stack as="li" direction="row" align="center" className="list-icons">
+      <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
         {icon}
-      </Flex> */}
-      <Link href={prodUrl(href)}>
+      </Flex>
+      <Link
+        href={prodUrl(href)}
+        _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
+      >
         <Text variant="link">{text}</Text>
       </Link>
     </Stack>
@@ -49,19 +54,19 @@ export default function FeatureWithImage() {
             divider={<StackDivider borderColor="gray.light" />}
           >
             <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              icon={<Icon as={FaCaretRight} w="1.25rem" h="1.25rem" aria-hidden="true" />}
               iconBg=""
               text="Index"
               href="/"
             />
             <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              icon={<Icon as={FaCaretRight} w="1.25rem" h="1.25rem" aria-hidden="true" />}
               iconBg=""
               text="Accessible Site"
               href="/accessible"
             />
             <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+              icon={<Icon as={FaCaretRight} w="1.25rem" h="1.25rem" aria-hidden="true" />}
               iconBg=""
               text="Inaccessible Site"
               href="/inaccessible"
@@ -69,7 +74,7 @@ export default function FeatureWithImage() {
           </Stack>
         </Stack>
         <Flex>
-          <Image src="/stock.jpg" alt="" rounded="md" objectFit="cover" />
+          <Image src="/stock.jpg" alt="" rounded="md" objectFit="cover" className="white-mask" />
         </Flex>
       </SimpleGrid>
     </Container>

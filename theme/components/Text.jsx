@@ -20,6 +20,7 @@ const Text = defineStyleConfig({
       p: 1.5,
       rounded: "md",
       fontSize: "sm",
+      fontWeight: 700,
     },
     link: { color: "blue.bold", fontWeight: "700", _hover: { color: "blue.base" } },
   },

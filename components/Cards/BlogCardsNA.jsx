@@ -20,13 +20,20 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
       <Box maxW={"90%"} w={"full"} boxShadow={"2xl"} rounded={"md"} p={6} overflow={"hidden"}>
         <Box h={"210px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
           <Link>
-            <Image src={`/${imgSrc}`} fill alt="" />
+            <Image className="white-mask" src={`/${imgSrc}`} fill alt="" />
           </Link>
         </Box>
         <Stack>
           <Text variant="tag">{tag}</Text>
           <Heading as="span" size="h3">
-            {title}
+            <Text variant="link">
+              <Link
+                href="#"
+                _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
+              >
+                {title}
+              </Link>
+            </Text>
           </Heading>
           <Text variant="blue">{text}</Text>
         </Stack>

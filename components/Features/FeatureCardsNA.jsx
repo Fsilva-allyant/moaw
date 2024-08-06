@@ -1,22 +1,28 @@
 "use client";
 
 import { SimpleGrid, Icon, Text, Stack, Flex, VStack, Heading } from "@chakra-ui/react";
-import { HiLightBulb } from "react-icons/hi";
-
-const Feature = ({ title, text, icon }) => {
+import { FaArchway, FaMedapps, FaLaptopCode, FaHandshake } from "react-icons/fa6";
+const Feature = ({ title, text, icon, maxW }) => {
   return (
     <Stack alignItems={["center", "start"]} textAlign={["center", "start"]} maxW="90%">
       <Flex
         color="white"
         rounded="full"
-        bg="gray.light"
+        bg="blue.opacity"
         w="3.5rem"
         h="3.5rem"
         mb="0.25rem"
         align="center"
         justify="center"
       >
-        <Icon maxWidth="2.5rem" aria-hidden="true" as={icon} color="blue.base" w="4rem" h="4rem" />
+        <Icon
+          maxWidth={maxW ?? "2.5rem"}
+          aria-hidden="true"
+          as={icon}
+          color="blue.base"
+          w="4rem"
+          h="4rem"
+        />
       </Flex>
       <Heading as="h3" size="h3" variant="blue">
         {title}
@@ -36,19 +42,22 @@ export default function FeatureCards() {
       </Heading>
       <SimpleGrid columns={[1, 3]} spacing="2.5rem">
         <Feature
-          icon={HiLightBulb}
+          icon={FaArchway}
           title="Rissus Commodo"
           text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+          maxW="2rem"
         />
         <Feature
-          icon={HiLightBulb}
+          icon={FaHandshake}
           title="Rissus Commodo"
           text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+          maxW="2.5rem"
         />
         <Feature
-          icon={HiLightBulb}
+          icon={FaMedapps}
           title="Rissus Commodo"
           text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+          maxW="1.5rem"
         />
       </SimpleGrid>
     </VStack>

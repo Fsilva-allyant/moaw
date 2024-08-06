@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import {
   Box,
   Center,
@@ -11,7 +11,7 @@ import {
   Avatar,
   VStack,
   SimpleGrid,
-
+  Link,
   // Image,
 } from "@chakra-ui/react";
 
@@ -29,12 +29,24 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
         overflow={"hidden"}
       >
         <Box h={"210px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-          <Image src={`/${imgSrc}`} fill alt="" />
+          <Image className="white-mask" src={`/${imgSrc}`} fill alt="" />
         </Box>
         <Stack>
           <Text variant="tag">{tag}</Text>
           <Heading as="h3" size="h3">
-            <Link href="#">{title}</Link>
+            <Text variant="link">
+              <Link
+                href="#"
+                _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
+                _focus={{
+                  outline: "3px solid #6126eb !important",
+                  outlineOffset: "2px !important",
+                  boxShadow: "none !important",
+                }}
+              >
+                {title}
+              </Link>
+            </Text>
           </Heading>
           <Text variant="blue">{text}</Text>
         </Stack>

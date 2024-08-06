@@ -78,7 +78,7 @@ const customTheme = extendTheme({
       base: "#6126eb",
       bold: "#00244b",
       light: "#75e7ef",
-      opacity: "#4E10E01A",
+      opacity: "#efe9fd",
     },
     white: "#FFFFFF",
     gray: {

@@ -24,6 +24,11 @@
   left: 0;
   top: 0;
 }
+
+.white-mask {
+  background-color: white;
+  opacity: 0.9;
+}
 // Layout
 #main {
   width: 100%;
@@ -117,7 +122,9 @@ header {
 
 .desktop-nav .menu-items a:hover,
 .desktop-nav .menu-items button:hover {
-  background-color: #f2f2f2;
+  background-color: #efe9fd;
+  border-radius: 0.5rem;
+  color: #6126eb;
 }
 
 .desktop-nav .arrow::after {
@@ -261,3 +268,11 @@ header {
   margin: 0 auto;
   padding: 3rem 20px;
 }
+
+// features
+
+// .list-icons::before {
+//   font-family: "Font Awesome 5 Free";
+//   font-weight: 900;
+//   content: "\f105";
+// }

@@ -12,9 +12,9 @@ export default function HeroBanner() {
       backgroundPosition="center center"
       backgroundColor="blue.bold"
     >
-      <VStack w="full" justify="center" px={["1rem", "2rem"]} bgColor="blue.base" opacity="0.9">
-        <Stack maxW="50%" align="flex-start" spacing="2rem" textAlign="center">
-          <Heading as="h1" size={["h2", "h1"]} variant="white">
+      <VStack w="full" justify="center" px={["1rem", "2rem"]} bgColor="#6126eb82">
+        <Stack maxW="65%" align="flex-start" spacing="2rem" textAlign="center">
+          <Heading as="h1" size={["h2", "h1"]} variant="white" textShadow={"2px 2px 3px #00244b"}>
             Let&apos;s improve the usability of our empathy
           </Heading>
           <Text variant="white" size={["sm", "md"]}>
@@ -25,8 +25,9 @@ export default function HeroBanner() {
             as="a"
             href="#"
             variant="white"
-            size={["md", "lg"]}
+            size={["md"]}
             _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+            boxShadow={"1px 1px 2px #00244b"}
           >
             Read more
           </Button>
