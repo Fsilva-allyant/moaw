@@ -16,7 +16,7 @@ export default function HeroBannerNA() {
         w="full"
         justify="center"
         px={["1rem", "2rem"]}
-        bgColor="#6126eb82"
+        bgColor="#6126eb1f"
         // opacity="0.5"
       >
         <Stack maxW="50%" align="flex-start" spacing="2rem" textAlign="center">
