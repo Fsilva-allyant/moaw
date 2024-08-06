@@ -24,12 +24,11 @@ const Feature = ({ text, href, icon, iconBg }) => {
       <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
         {icon}
       </Flex>
-      <Link href={prodUrl(href)}>
-        <Text
-          as="h3"
-          variant="link"
-          _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
-        >
+      <Link
+        href={prodUrl(href)}
+        _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
+      >
+        <Text as="h3" variant="link">
           {text}
         </Text>
       </Link>
