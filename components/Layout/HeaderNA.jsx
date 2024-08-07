@@ -14,7 +14,7 @@ export default function HeaderNA() {
         Skip to main content
       </Link>
       <div className="nav-area">
-        <Link href={prodUrl("/inaccessible")}>
+        <Link className="no-focus-indicator" href={prodUrl("/inaccessible")}>
           <Image src="/moaw_dark.png" alt="company logo" />
         </Link>
         <NavbarNA />

@@ -15,9 +15,13 @@ import {
   // Image,
 } from "@chakra-ui/react";
 
-const BlogPost = ({ title, text, tag, imgSrc }) => {
+import BLOGS from "@/common/blogsData";
+
+const BlogPost = ({ blog }) => {
+  const { img, text, info } = blog;
+  console.log(blog);
   return (
-    <Center as="li">
+    <Center as="li" height={"fit-content"}>
       <Box
         role="group"
         aria-label="blog"
@@ -29,10 +33,10 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
         overflow={"hidden"}
       >
         <Box h={"210px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-          <Image className="white-mask" src={`/${imgSrc}`} fill alt="" />
+          <Image className="white-mask" src={`/${img.src}`} fill alt="" />
         </Box>
         <Stack>
-          <Text variant="tag">{tag}</Text>
+          <Text variant="tag">{text.tag}</Text>
           <Heading as="h3" size="h3">
             <Text variant="link">
               <Link
@@ -44,17 +48,19 @@ const BlogPost = ({ title, text, tag, imgSrc }) => {
                   boxShadow: "none !important",
                 }}
               >
-                {title}
+                {text.heading}
               </Link>
             </Text>
           </Heading>
-          <Text variant="blue">{text}</Text>
+          <Text variant="blue">{text.body}</Text>
         </Stack>
         <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
           <Avatar src="/avatar.png" name="" />
           <Stack direction={"column"} spacing={0} fontSize={"sm"}>
-            <Text>Federico Silva</Text>
-            <Text>Jul 22, 2024 · 6min read</Text>
+            <Text>{info.name}</Text>
+            <Text>
+              {info.date} · {info.readMinutes}min read
+            </Text>
           </Stack>
         </Stack>
       </Box>
@@ -69,30 +75,9 @@ export default function BlogCards() {
         Our Blog
       </Heading>
       <SimpleGrid as="ul" columns={[1, 3]} spacing={10}>
-        <BlogPost
-          title={"Rissus Commodo"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-          tag="Our Story"
-          imgSrc="blog1.jpg"
-        />
-        <BlogPost
-          title={"Rissus Commodo"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-          tag="Our Story"
-          imgSrc="blog2.jpeg"
-        />
-        <BlogPost
-          title={"Rissus Commodo"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-          tag="Our Story"
-          imgSrc="blog3.png"
-        />
+        {BLOGS.map((blog) => {
+          return <BlogPost key={blog.id} blog={blog} />;
+        })}
       </SimpleGrid>
     </VStack>
   );

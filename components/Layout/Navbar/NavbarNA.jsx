@@ -14,9 +14,12 @@ export default function NavbarNA() {
         })}
       </ul>
       <Button
+        className="no-focus-indicator"
+        _focus={{
+          bg: "blue.base",
+        }}
         display={["none", "inline-flex"]}
         variant="blue"
-        _focus={{ bg: "blue.bold !important" }}
       >
         Sign In
       </Button>

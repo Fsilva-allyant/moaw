@@ -12,15 +12,19 @@ export default function HeroBanner() {
       backgroundPosition="center center"
       backgroundColor="blue.bold"
     >
-      <VStack w="full" justify="center" px={["1rem", "2rem"]} bgColor="#6126eb82">
+      <VStack w="full" justify="center" px={["1rem", "2rem"]} bgColor="#6126ebde">
         <Stack maxW="65%" align="flex-start" spacing="2rem" textAlign="center">
           <Heading as="h1" size={["h2", "h1"]} variant="white" textShadow={"2px 2px 3px #00244b"}>
-            Let&apos;s improve the usability of our empathy
+            Discover the Museum of Accessibility Woes
           </Heading>
-          <Text variant="white" size={["sm", "md"]}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua
-          </Text>
+          <Stack>
+            <Text variant="white" size={["sm", "md"]}>
+              Explore the common pitfalls of web accessibility through our exhibits.
+            </Text>
+            <Text variant="white" size={["sm", "md"]}>
+              Learn why accessible design matters and how we can create a more inclusive web.
+            </Text>
+          </Stack>
           <Button
             as="a"
             href="#"
@@ -29,7 +33,7 @@ export default function HeroBanner() {
             _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
             boxShadow={"1px 1px 2px #00244b"}
           >
-            Read more
+            Learn more
           </Button>
         </Stack>
       </VStack>

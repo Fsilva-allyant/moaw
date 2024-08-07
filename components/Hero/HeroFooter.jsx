@@ -39,8 +39,14 @@ export default function HeroFooter() {
           </Stack>
         </Flex>
         <Flex display={["none", "flex"]} flex="1" p="2rem 2rem 0 0">
-          <Image alt="" objectFit="cover" src="/hero-footer.png" />
-          <Text className="sr-only">Do you have any questions?</Text>
+          <Image alt="" objectFit="cover" src="/textwithinimage_2.png" />
+          <Text as="h2" className="sr-only">
+            Do you have any questions?
+          </Text>
+          <Text className="sr-only">
+            If you want to know more about this project and other projects in our lab, do not
+            hesitate to contact us!
+          </Text>
         </Flex>
       </Stack>
     </Box>

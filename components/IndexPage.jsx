@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Container,
   SimpleGrid,
@@ -11,6 +10,9 @@ import {
   StackDivider,
   Icon,
   Link,
+  Box,
+  Center,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 
 import prodUrl from "@/common/prodUrl";
@@ -22,8 +24,14 @@ const Feature = ({ text, href, icon, iconBg }) => {
       {/* <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
         {icon}
       </Flex> */}
-      <Link href={href}>
-        <Text variant="link">{text}</Text>
+      <Link
+        href={href}
+        _hover={{ textDecoration: "underline", textDecorationColor: "white" }}
+        _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+      >
+        <Text variant="link-white" size="md">
+          {text}
+        </Text>
       </Link>
     </Stack>
   );
@@ -31,47 +39,65 @@ const Feature = ({ text, href, icon, iconBg }) => {
 
 export default function IndexPage() {
   return (
-    <Container maxW="90%" p="0.75rem" className="main-index">
-      <SimpleGrid columns={["1", "2"]} spacing="2.5rem">
-        <Stack spacing="1rem">
-          <Text variant="tag">Our Lab</Text>
-          <Heading as="h2" size="h2" variant="blue">
-            Before and After
-          </Heading>
-          <Text variant="blue" size="sm">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore
-          </Text>
-          <Stack
-            as="ul"
-            spacing="1rem"
-            py="1rem"
-            divider={<StackDivider borderColor="gray.light" />}
-          >
-            {/* <Feature
+    <Center className="body-index">
+      <Container maxW="90%" p="3rem" className="main-index">
+        <SimpleGrid columns={["1", "2"]} spacing="2.5rem">
+          <Stack spacing="1rem">
+            <Text variant="tag">Our Lab</Text>
+            <Heading as="h2" size="h2" variant="white">
+              Museum of Accessibility Woes
+            </Heading>
+            <Stack>
+              <Text variant="blue" size="sm" color="white">
+                Welcome to the &quot;Museum of Accessibility Woes&quot;, an educational demo page
+                that shows common accessibility problems with real examples. You&apos;ll see an
+                inaccessible landing page, an accessible version, and explanations of the
+                highlighted issues.
+              </Text>
+              <Text variant="blue" size="sm" color="white">
+                This demo doesn&apos;t cover all Web Content Accessibility Guidelines (WCAG) or list
+                every problem, but it helps you understand some key points of web accessibility.
+              </Text>
+            </Stack>
+            <Stack
+              as="ul"
+              spacing="1rem"
+              py="1rem"
+              divider={<StackDivider borderColor="gray.light" />}
+            >
+              {/* <Feature
               icon={<Icon as="" w="1.25rem" h="1.25rem" />}
               iconBg=""
               text="Index"
               href="/index.html"
             /> */}
-            <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
-              iconBg=""
-              text="Accessible Site"
-              href={prodUrl("/accessible")}
-            />
-            <Feature
-              icon={<Icon as="" w="1.25rem" h="1.25rem" />}
-              iconBg=""
-              text="Inaccessible Site"
-              href={prodUrl("/inaccessible")}
-            />
+              <Feature
+                icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+                iconBg=""
+                text="Accessible Site"
+                href={prodUrl("/accessible")}
+              />
+              <Feature
+                icon={<Icon as="" w="1.25rem" h="1.25rem" />}
+                iconBg=""
+                text="Inaccessible Site"
+                href={prodUrl("/inaccessible")}
+              />
+            </Stack>
           </Stack>
-        </Stack>
-        <Flex>
-          <Image src="/stock.jpg" alt="" rounded="md" objectFit="cover" />
-        </Flex>
-      </SimpleGrid>
-    </Container>
+          <Box
+            role="img"
+            alt="Museum of Accessibility Woes logo"
+            backgroundImage={'url("/logo_big.png")'}
+            backgroundPosition={"center"}
+            backgroundRepeat={"no-repeat"}
+            w="100%"
+            h="100%"
+          >
+            {/* <VisuallyHidden>Museum of Accessibility Woes logo</VisuallyHidden> */}
+          </Box>
+        </SimpleGrid>
+      </Container>
+    </Center>
   );
 }

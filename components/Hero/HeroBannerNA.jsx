@@ -12,21 +12,17 @@ export default function HeroBannerNA() {
       backgroundPosition="center center"
       backgroundColor="blue.bold"
     >
-      <VStack
-        w="full"
-        justify="center"
-        px={["1rem", "2rem"]}
-        bgColor="#6126eb1f"
-        // opacity="0.5"
-      >
+      <VStack w="full" justify="center" px={["1rem", "2rem"]} bgColor="#6126eb1f">
         <Stack maxW="50%" align="flex-start" spacing="2rem" textAlign="center">
           <Heading as="span" size={["h2", "h1"]} variant="white" textShadow={"2px 2px 3px #00244b"}>
-            Let&apos;s improve the usability of our empathy
+            Discover the Museum of Accessibility Woes
           </Heading>
           <ul>
             <Text as="li" variant="white" size={["sm", "md"]}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua
+              Explore the common pitfalls of web accessibility through our exhibits.
+            </Text>
+            <Text as="li" variant="white" size={["sm", "md"]}>
+              Learn why accessible design matters and how we can create a more inclusive web.
             </Text>
           </ul>
           <Button
@@ -34,9 +30,9 @@ export default function HeroBannerNA() {
             variant="white"
             size={["md"]}
             _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
-            aria-label="Contact Us"
+            aria-label="Read More about Museum of Accessibility Woes"
           >
-            Read more
+            Learn more
           </Button>
         </Stack>
       </VStack>

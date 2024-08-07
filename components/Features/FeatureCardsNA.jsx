@@ -43,20 +43,20 @@ export default function FeatureCards() {
       <SimpleGrid columns={[1, 3]} spacing="2.5rem">
         <Feature
           icon={FaArchway}
-          title="Rissus Commodo"
-          text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+          title="Educational Tours"
+          text="Gain insights into web accessibility by exploring our curated exhibits."
           maxW="2rem"
         />
         <Feature
-          icon={FaHandshake}
-          title="Rissus Commodo"
-          text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+          icon={FaLaptopCode}
+          title="Accessibility Learning"
+          text="Learn about common accessibility barriers and how to remediate them."
           maxW="2.5rem"
         />
         <Feature
           icon={FaMedapps}
-          title="Rissus Commodo"
-          text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+          title="Live User Demos"
+          text="Use our site for live demonstrations of accessibility issues and solutions."
           maxW="1.5rem"
         />
       </SimpleGrid>

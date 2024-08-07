@@ -44,8 +44,20 @@ export default function FeatureWithImage() {
             Before and After
           </Heading>
           <Text variant="blue" size="sm">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore
+            We created both an accessible and an inaccessible version to show the difference between
+            them. This lets you see the problems faced by people with disabilities. By comparing the
+            two, we hope to make it clear why making websites that are{" "}
+            <Link
+              _hover={{
+                textDecoration: "underline",
+                textDecorationColor: "#6126eb",
+                color: "blue.base !important",
+              }}
+              href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+            >
+              WCAG
+            </Link>{" "}
+            compliant matters for everyone.
           </Text>
           <Stack
             as="ul"

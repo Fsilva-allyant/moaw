@@ -13,6 +13,7 @@ const SocialButton = ({ children, label, href }) => {
       href={href}
       variant="social"
       _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }}
+      color="blue.base"
     >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
