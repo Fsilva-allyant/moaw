@@ -26,7 +26,7 @@ const Feature = ({ text, href, icon, iconBg }) => {
       </Flex>
       <Link
         className="no-focus-indicator"
-        href={prodUrl(href)}
+        // href={prodUrl(href)}
         _hover={{
           textDecoration: "underline",
           textDecorationColor: "#6126eb",

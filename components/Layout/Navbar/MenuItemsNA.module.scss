@@ -1,0 +1,8 @@
+.arrowNA::after {
+  content: "\25bc";
+  font-weight: 900;
+  display: inline-block;
+  padding-left: 3px;
+  vertical-align: middle;
+  font-size: 13px;
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Stack, Text, VisuallyHidden, Link, Image } from "@chakra-ui/react";
+import { Box, Button, Stack, Text, Flex, Link, Image } from "@chakra-ui/react";
 
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ const SocialButton = ({ children, label, href }) => {
       _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }}
       color="blue.base"
     >
-      <VisuallyHidden>{label}</VisuallyHidden>
+      <Box display={"none"}>{label}</Box>
       {children}
     </Button>
   );
@@ -33,13 +33,13 @@ export default function FooterNA() {
         py="1rem"
         spacing="1rem" //mobile
       >
-        <Link
-          _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }}
-          href={prodUrl("/accessible")}
-        >
+        <Link _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }} href={prodUrl("/")}>
           <Image src="/moaw_light.png" />
         </Link>
-        <Text variant="white">© 2024 Allyant. All rights reserved</Text>
+        <Flex direction={"column"} alignItems={"center"}>
+          <Text>+1 613 236 0866</Text>
+          <Text variant="white">© 2024 Allyant. All rights reserved</Text>
+        </Flex>
         <Stack direction="row">
           <SocialButton label="Instagram" href="#">
             <FaInstagram />

@@ -15,14 +15,7 @@ const Feature = ({ title, text, icon, maxW }) => {
         align="center"
         justify="center"
       >
-        <Icon
-          maxWidth={maxW ?? "2.5rem"}
-          aria-hidden="true"
-          as={icon}
-          color="blue.base"
-          w="4rem"
-          h="4rem"
-        />
+        <Icon maxWidth={maxW ?? "2.5rem"} as={icon} color="blue.base" w="4rem" h="4rem" />
       </Flex>
       <Heading as="h3" size="h3" variant="blue">
         {title}

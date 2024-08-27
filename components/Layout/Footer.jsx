@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Stack, Text, VisuallyHidden, Link, Image } from "@chakra-ui/react";
+import { Box, Button, Stack, Text, VisuallyHidden, Flex, Link, Image } from "@chakra-ui/react";
 
 import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
@@ -29,13 +29,19 @@ export default function Footer() {
         py="1rem"
         spacing="1rem" //mobile
       >
-        <Link
-          href={prodUrl("/accessible")}
-          _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
-        >
-          <Image src="/moaw_light.png" alt="Museum of Accessibility Woes" />
+        <Link href={prodUrl("/")} _focus={{ outline: "3px solid white", outlineOffset: "2px" }}>
+          <Image src="/moaw_light.png" alt="Museum of Accessibility Woes homepage" />
         </Link>
-        <Text variant="white">© 2024 Allyant. All rights reserved</Text>
+        <Flex direction={"column"} alignItems={"center"}>
+          {/* <VisuallyHidden>Contact</VisuallyHidden> */}
+          <Link
+            _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+            href="tel:+16132360866"
+          >
+            +1 613 236 0866
+          </Link>
+          <Text variant="white">© 2024 Allyant. All rights reserved</Text>
+        </Flex>
         <Stack as="ul" direction="row">
           <SocialButton label="Instagram" href="#">
             <FaInstagram aria-hidden="true" />

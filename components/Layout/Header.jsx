@@ -14,8 +14,8 @@ export default function Header() {
         Skip to main content
       </Link>
       <div className="nav-area">
-        <Link href={prodUrl("/accessible")}>
-          <Image src="/moaw_dark.png" alt="Museum of Accessibility Woes" />
+        <Link href={prodUrl("/")}>
+          <Image src="/moaw_dark.png" alt="Museum of Accessibility Woes homepage" />
         </Link>
         <Navbar />
         <MobileNav />

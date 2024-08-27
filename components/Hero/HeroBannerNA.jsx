@@ -17,14 +17,12 @@ export default function HeroBannerNA() {
           <Heading as="span" size={["h2", "h1"]} variant="white" textShadow={"2px 2px 3px #00244b"}>
             Discover the Museum of Accessibility Woes
           </Heading>
-          <ul>
-            <Text as="li" variant="white" size={["sm", "md"]}>
-              Explore the common pitfalls of web accessibility through our exhibits.
-            </Text>
-            <Text as="li" variant="white" size={["sm", "md"]}>
-              Learn why accessible design matters and how we can create a more inclusive web.
-            </Text>
-          </ul>
+          <Text variant="white" size={["sm", "md"]}>
+            Explore the common pitfalls of web accessibility through our exhibits.
+          </Text>
+          <Text variant="white" size={["sm", "md"]}>
+            Learn why accessible design matters and how we can create a more inclusive web.
+          </Text>
           <Button
             as="a"
             variant="white"

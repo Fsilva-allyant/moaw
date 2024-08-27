@@ -19,12 +19,12 @@ const BlogPost = ({ title, text, tag, imgSrc, editor, date, readMinutes }) => {
     <Center>
       <Box maxW={"90%"} w={"full"} boxShadow={"2xl"} rounded={"md"} p={6} overflow={"hidden"}>
         <Box h={"210px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-          <Link>
-            <Image className="white-mask" src={`/${imgSrc}`} fill alt="" />
-          </Link>
+          <Image className="white-mask" src={`/${imgSrc}`} fill alt={`${title}`} />
         </Box>
         <Stack>
-          <Text variant="tag">{tag}</Text>
+          <Text as="ul" variant="tag">
+            <li>{tag}</li>
+          </Text>
           <Heading as="span" size="h3">
             <Text variant="link">
               <Link

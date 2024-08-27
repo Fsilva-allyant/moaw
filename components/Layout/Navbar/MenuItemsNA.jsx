@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import styles from "./MenuItemsNA.module.scss";
 
 import DropdownNA from "./DropdownNA";
 
@@ -50,18 +51,18 @@ const MenuItemsNA = ({ items, depthLevel }) => {
     >
       {items.url && items.submenu ? (
         <>
-          <button type="button" onClick={() => toggleDropdown()}>
+          <a href="#">
             <span>{items.title}</span>
-            {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
-          </button>
+            {depthLevel > 0 ? <span>&raquo;</span> : <span className={styles.arrowNA} />}
+          </a>
           <DropdownNA depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : !items.url && items.submenu ? (
         <>
-          <button type="button">
+          <a href="#">
             {items.title}
-            {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
-          </button>
+            {depthLevel > 0 ? <span>&raquo;</span> : <span className={styles.arrowNA} />}
+          </a>
           <DropdownNA depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : (
