@@ -7,15 +7,15 @@ export const metadata = {
   // icons: { icon: "/favicon.svg" },
 };
 
-const schneiderProps = {
-  logo: {
-    header: "/schn_dark.png",
-    footer: "/schn_light.png",
-  },
-  theme: "#3DCD58",
-};
-
 const Index = () => {
+  const schneiderProps = {
+    logo: {
+      header: "/schn_dark.png",
+      footer: "/schn_light.png",
+    },
+    theme: "#3DCD58",
+  };
+  console.log(schneiderProps);
   return (
     <LayoutNA props={schneiderProps}>
       <ContactFormNA />
