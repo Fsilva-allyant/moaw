@@ -8,6 +8,7 @@ import MobileNavNA from "./Navbar/MobileNavNA";
 import prodUrl from "@/common/prodUrl";
 
 export default function HeaderNA({ props }) {
+  console.log("header", props);
   return (
     <div>
       <Link display="none" href="#main">

@@ -15,9 +15,16 @@ const Index = () => {
     },
     theme: "#3DCD58",
   };
-  console.log(schneiderProps);
   return (
-    <LayoutNA props={schneiderProps}>
+    <LayoutNA
+      layout={{
+        logo: {
+          header: "/schn_dark.png",
+          footer: "/schn_light.png",
+        },
+        theme: "#3DCD58",
+      }}
+    >
       <ContactFormNA />
     </LayoutNA>
   );
