@@ -5,6 +5,7 @@ import Button from "./components/Button";
 import Link from "./components/Link";
 import Text from "./components/Text";
 import Heading from "./components/Heading";
+import FormErrorMessage from "./components/FormErrorMessage";
 
 // function goldenRatio() {
 //   return {
@@ -82,10 +83,13 @@ const customTheme = extendTheme({
     },
     white: "#FFFFFF",
     gray: {
+      cc: "#808080",
       bold: "#A0AEC0",
       base: "#CBD5E0",
       light: "#E2E8F0",
     },
+    red: { onLight: "#C53030" },
+    schneider: "#3DCD58",
   },
   fonts: {
     body: `Roboto, ${chakraTheme.fonts?.body}`,
@@ -112,6 +116,7 @@ const customTheme = extendTheme({
     Link,
     Text,
     Heading,
+    FormErrorMessage,
   },
 });
 

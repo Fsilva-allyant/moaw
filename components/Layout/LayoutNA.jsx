@@ -6,15 +6,15 @@ import { Flex } from "@chakra-ui/react";
 import HeaderNA from "./HeaderNA";
 import FooterNA from "./FooterNA";
 
-const LayoutNA = ({ children }) => {
+const LayoutNA = ({ children, props }) => {
   return (
     <>
       <Flex direction="column" minH="100vh">
-        <HeaderNA />
+        <HeaderNA props={props} />
         <Flex as="main" id="main" gap="4rem">
           {children}
         </Flex>
-        <FooterNA />
+        <FooterNA props={props} />
       </Flex>
     </>
   );

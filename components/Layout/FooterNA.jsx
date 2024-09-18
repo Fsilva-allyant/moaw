@@ -2,7 +2,7 @@
 
 import { Box, Button, Stack, Text, Flex, Link, Image } from "@chakra-ui/react";
 
-import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import SocialMediaLinks from "../SocialMediaLinks";
 
 import prodUrl from "@/common/prodUrl";
 
@@ -21,7 +21,7 @@ const SocialButton = ({ children, label, href }) => {
   );
 };
 
-export default function FooterNA() {
+export default function FooterNA({ props }) {
   return (
     <Box as="footer" bg="blue.bold" color="white">
       <Stack
@@ -34,23 +34,13 @@ export default function FooterNA() {
         spacing="1rem" //mobile
       >
         <Link _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }} href={prodUrl("/")}>
-          <Image src="/moaw_light.png" />
+          <Image src={props.logo.footer !== undefined ? props.logo.footer : "/moaw_light.png"} />
         </Link>
         <Flex direction={"column"} alignItems={"center"}>
           <Text>+1 613 236 0866</Text>
           <Text variant="white">© 2024 Allyant. All rights reserved</Text>
         </Flex>
-        <Stack direction="row">
-          <SocialButton label="Instagram" href="#">
-            <FaInstagram />
-          </SocialButton>
-          <SocialButton label="LinkedIn" href="#">
-            <FaLinkedin />
-          </SocialButton>
-          <SocialButton label="Twitter" href="#">
-            <FaTwitter />
-          </SocialButton>
-        </Stack>
+        <SocialMediaLinks />
       </Stack>
     </Box>
   );

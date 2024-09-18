@@ -7,7 +7,7 @@ import MobileNavNA from "./Navbar/MobileNavNA";
 
 import prodUrl from "@/common/prodUrl";
 
-export default function HeaderNA() {
+export default function HeaderNA({ props }) {
   return (
     <div>
       <Link display="none" href="#main">
@@ -15,7 +15,10 @@ export default function HeaderNA() {
       </Link>
       <div className="nav-area">
         <Link className="no-focus-indicator" href={prodUrl("/")}>
-          <Image src="/moaw_dark.png" alt="company logo" />
+          <Image
+            src={props.logo.header !== undefined ? props.logo.header : "/moaw_dark.png"}
+            alt="company logo"
+          />
         </Link>
         <NavbarNA />
         <MobileNavNA />

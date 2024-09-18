@@ -20,20 +20,11 @@ export default function HeroFooter() {
             <Stack direction={["column", "row"]} spacing="1rem">
               <Button
                 as="a"
-                href={prodUrl("/accessible")}
+                href={prodUrl("/accessible/contact")}
                 variant="white"
                 _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
               >
-                Accessible
-              </Button>
-              <Button
-                as="a"
-                href={prodUrl("/inaccessible")}
-                variant="blue"
-                border="3px solid white"
-                _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
-              >
-                Inaccessible
+                Contact Us
               </Button>
             </Stack>
           </Stack>
