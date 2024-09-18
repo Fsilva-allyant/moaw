@@ -15,7 +15,7 @@ export const metadata = {
 
 const Index = () => {
   return (
-    <LayoutNA>
+    <LayoutNA layout>
       <HeroBannerNA />
       <FeatureCardsNA />
       <FeatureWithImageNA />

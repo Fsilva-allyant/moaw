@@ -17,7 +17,7 @@ export default function HeaderNA({ props }) {
       <div className="nav-area">
         <Link className="no-focus-indicator" href={prodUrl("/")}>
           <Image
-            src={props.logo.header !== undefined ? props.logo.header : "/moaw_dark.png"}
+            src={props?.logo?.header !== undefined ? props?.logo?.header : "/moaw_dark.png"}
             alt="company logo"
           />
         </Link>

@@ -34,7 +34,9 @@ export default function FooterNA({ props }) {
         spacing="1rem" //mobile
       >
         <Link _focus={{ outline: "3px solid blue.base", outlineOffset: "2px" }} href={prodUrl("/")}>
-          <Image src={props.logo.footer !== undefined ? props.logo.footer : "/moaw_light.png"} />
+          <Image
+            src={props?.logo?.footer !== undefined ? props?.logo?.footer : "/moaw_light.png"}
+          />
         </Link>
         <Flex direction={"column"} alignItems={"center"}>
           <Text>+1 613 236 0866</Text>
