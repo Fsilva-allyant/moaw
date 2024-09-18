@@ -7,7 +7,6 @@ import HeaderNA from "./HeaderNA";
 import FooterNA from "./FooterNA";
 
 const LayoutNA = ({ children, layout }) => {
-  console.log(`layout: ${layout}`);
   return (
     <>
       <Flex direction="column" minH="100vh">

@@ -1,8 +1,10 @@
 "use client";
 
 import { Stack, Flex, Button, Text, VStack, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { usePathname } from "next/navigation";
 
 export default function HeroBannerNA() {
+  const isSchneider = usePathname().includes("schneider");
   return (
     <Flex
       w="full"
@@ -28,6 +30,7 @@ export default function HeroBannerNA() {
             variant="white"
             size={["md"]}
             _focus={{ outline: "3px solid white", outlineOffset: "2px" }}
+            _hover={{ bg: isSchneider ? "schneider" : "blue.bold" }}
             aria-label="Read More about Museum of Accessibility Woes"
           >
             Learn more

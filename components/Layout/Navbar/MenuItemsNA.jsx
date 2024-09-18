@@ -1,12 +1,14 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import styles from "./MenuItemsNA.module.scss";
+import { usePathname } from "next/navigation";
 
 import DropdownNA from "./DropdownNA";
 
 import prodUrl from "@/common/prodUrl";
 
-const MenuItemsNA = ({ items, depthLevel }) => {
+const MenuItemsNA = ({ items, depthLevel, theme }) => {
+  const isSchneider = usePathname().includes("schneider");
   const [dropdown, setDropdown] = useState(false);
   let ref = useRef();
 

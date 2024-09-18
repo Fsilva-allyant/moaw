@@ -14,7 +14,10 @@ import {
   // Image,
 } from "@chakra-ui/react";
 
+import { usePathname } from "next/navigation";
+
 const BlogPost = ({ title, text, tag, imgSrc, editor, date, readMinutes }) => {
+  const isSchneider = usePathname().includes("schneider");
   return (
     <Center>
       <Box maxW={"90%"} w={"full"} boxShadow={"2xl"} rounded={"md"} p={6} overflow={"hidden"}>
@@ -22,15 +25,15 @@ const BlogPost = ({ title, text, tag, imgSrc, editor, date, readMinutes }) => {
           <Image className="white-mask" src={`/${imgSrc}`} fill alt={`${title}`} />
         </Box>
         <Stack>
-          <Text as="ul" variant="tag">
+          <Text as="ul" variant={isSchneider ? "schneiderTag" : "tag"}>
             <li>{tag}</li>
           </Text>
           <Heading as="span" size="h3">
-            <Text variant="link">
+            <Text variant={isSchneider ? "schneiderLink" : "link"}>
               <Link
                 className="no-focus-indicator"
                 href="#"
-                _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
+                // _hover={{ textDecoration: "underline", textDecorationColor: "#6126eb" }}
               >
                 {title}
               </Link>

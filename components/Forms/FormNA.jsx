@@ -16,7 +16,7 @@ import {
 import { BsPerson } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
-export default function HookForm() {
+export default function HookForm({ theme }) {
   const {
     handleSubmit,
     register,
@@ -47,7 +47,7 @@ export default function HookForm() {
                 required: "Message is required",
               })}
               size="md"
-              _focus={{ borderColor: "blue.base !important" }}
+              _focus={{ borderColor: theme ? `${theme} !important` : "blue.base !important" }}
               _hover={{ borderColor: "gray.light" }}
               borderColor="gray.light"
               _placeholder={{ color: "gray.base" }}
@@ -72,7 +72,7 @@ export default function HookForm() {
                 required: "Message is required",
               })}
               size="md"
-              _focus={{ borderColor: "blue.base !important" }}
+              _focus={{ borderColor: theme ? `${theme} !important` : "blue.base !important" }}
               _hover={{ borderColor: "gray.light" }}
               borderColor="gray.light"
               _placeholder={{ color: "gray.base" }}
@@ -91,7 +91,7 @@ export default function HookForm() {
             {...register("message", {
               required: "Message is required",
             })}
-            _focus={{ borderColor: "blue.base !important" }}
+            _focus={{ borderColor: theme ? `${theme} !important` : "blue.base !important" }}
             _hover={{ borderColor: "gray.bold" }}
             borderColor="gray.light"
             _placeholder={{ color: "gray.base" }}
@@ -102,7 +102,12 @@ export default function HookForm() {
             </FormErrorMessage>
           )} */}
         </FormControl>
-        <Button backgroundColor={"schneider"} isLoading={isSubmitting} type="submit">
+        <Button
+          backgroundColor={"schneider"}
+          isLoading={isSubmitting}
+          _focus={{ outlineColor: theme ? `${theme} !important` : "blue.base !important" }}
+          type="submit"
+        >
           Send Message
         </Button>
       </Container>

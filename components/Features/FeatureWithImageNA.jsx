@@ -14,11 +14,13 @@ import {
 } from "@chakra-ui/react";
 
 import prodUrl from "@/common/prodUrl";
+import { usePathname } from "next/navigation";
 
 import { FaCaretRight } from "react-icons/fa6";
 
 // Icon props are unused unless it's decided to use icons
 const Feature = ({ text, href, icon, iconBg }) => {
+  const isSchneider = usePathname().includes("schneider");
   return (
     <Stack direction="row" align="center">
       <Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"} bg={iconBg}>
@@ -29,24 +31,31 @@ const Feature = ({ text, href, icon, iconBg }) => {
         // href={prodUrl(href)}
         _hover={{
           textDecoration: "underline",
-          textDecorationColor: "#6126eb",
-          color: "blue.light !important",
+          textDecorationColor: isSchneider ? "schneider" : "blue.base",
+          color: isSchneider ? "schneider !important" : "blue.light !important",
         }}
       >
-        <Text as="h3" variant="link">
-          {text}
-        </Text>
+        {isSchneider ? (
+          <Text as="h3" fontWeight="700">
+            {text}
+          </Text>
+        ) : (
+          <Text as="h3" variant="link">
+            {text}
+          </Text>
+        )}
       </Link>
     </Stack>
   );
 };
 
 export default function FeatureWithImageNA() {
+  const isSchneider = usePathname().includes("schneider");
   return (
     <Container maxW="90%" p="0.75rem">
       <SimpleGrid columns={["1", "2"]} spacing="2.5rem">
         <Stack spacing="1rem">
-          <Text variant="tag">Our Lab</Text>
+          <Text variant={isSchneider ? "schneiderTag" : "tag"}>Our Lab</Text>
           <Heading as="h5" size="h2" variant="blue">
             Before and After
           </Heading>

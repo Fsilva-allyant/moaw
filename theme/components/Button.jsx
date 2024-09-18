@@ -38,6 +38,10 @@ const Button = defineStyleConfig({
         color: "blue.bold",
       },
     },
+    schneider: {
+      backgroundColor: "white",
+      color: "blue.bold",
+    },
   },
 });
 

@@ -114,8 +114,9 @@ header {
   font-weight: 600;
   color: inherit;
   text-decoration: none;
-  outline: "#5510DD";
+  // outline: "#5510DD";
 }
+
 .menu-items-na,
 .menu-items-na a {
   color: #0000007a !important;
@@ -299,3 +300,11 @@ header {
 //   font-weight: 900;
 //   content: "\f105";
 // }
+
+.sch-link {
+  _focus: {
+    boxshadow: none !important;
+    outline: 3px solid #3dcd58 !important;
+    outlineoffset: 2px;
+  }
+}

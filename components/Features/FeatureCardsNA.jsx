@@ -2,7 +2,10 @@
 
 import { SimpleGrid, Icon, Text, Stack, Flex, VStack, Heading } from "@chakra-ui/react";
 import { FaArchway, FaMedapps, FaLaptopCode, FaHandshake } from "react-icons/fa6";
+
+import { usePathname } from "next/navigation";
 const Feature = ({ title, text, icon, maxW }) => {
+  const isSchneider = usePathname().includes("schneider");
   return (
     <Stack alignItems={["center", "start"]} textAlign={["center", "start"]} maxW="90%">
       <Flex
@@ -15,7 +18,13 @@ const Feature = ({ title, text, icon, maxW }) => {
         align="center"
         justify="center"
       >
-        <Icon maxWidth={maxW ?? "2.5rem"} as={icon} color="blue.base" w="4rem" h="4rem" />
+        <Icon
+          maxWidth={maxW ?? "2.5rem"}
+          as={icon}
+          color={isSchneider ? "schneider" : "blue.base"}
+          w="4rem"
+          h="4rem"
+        />
       </Flex>
       <Heading as="h3" size="h3" variant="blue">
         {title}

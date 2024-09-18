@@ -13,8 +13,9 @@ import {
 import { MdPhone, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import SocialMediaLinks from "../SocialMediaLinks";
 import FormNA from "@/components/Forms/FormNA";
+import { usePathname } from "next/navigation";
 
-export default function Contact() {
+export default function Contact({ theme }) {
   return (
     <Container maxW="full" m="auto" centerContent overflow="hidden">
       <Flex
@@ -78,7 +79,7 @@ export default function Contact() {
         </Stack>
         <Stack bg="white" borderRadius="lg" width="40%" color="#0B0E3F">
           <VStack spacing={5} m={8}>
-            <FormNA />
+            <FormNA theme={theme} />
           </VStack>
         </Stack>
       </Flex>

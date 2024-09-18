@@ -6,6 +6,13 @@ const Link = defineStyleConfig({
     logo: {
       _focus: { outline: "3px solid white", outlineOffset: "2px" },
     },
+    schneider: {
+      _hover: {
+        textDecoration: "underline",
+        textDecorationColor: "#3DCD58",
+        color: "#3DCD58 !important",
+      },
+    },
   },
 });
 

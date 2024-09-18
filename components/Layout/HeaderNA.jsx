@@ -8,7 +8,6 @@ import MobileNavNA from "./Navbar/MobileNavNA";
 import prodUrl from "@/common/prodUrl";
 
 export default function HeaderNA({ props }) {
-  console.log("header", props);
   return (
     <div>
       <Link display="none" href="#main">
@@ -21,7 +20,7 @@ export default function HeaderNA({ props }) {
             alt="company logo"
           />
         </Link>
-        <NavbarNA />
+        <NavbarNA theme={props?.theme} />
         <MobileNavNA />
       </div>
     </div>

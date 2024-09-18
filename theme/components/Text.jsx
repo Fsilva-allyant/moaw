@@ -30,6 +30,18 @@ const Text = defineStyleConfig({
       textShadow:
         "0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1),  0px 18px 23px rgba(0,0,0,0.1)",
     },
+    schneiderTag: {
+      color: "black",
+      bg: "#3DCD58",
+      opacity: "0.9",
+      alignSelf: "flex-start",
+      textTransform: "uppercase",
+      p: 1.5,
+      rounded: "md",
+      fontSize: "sm",
+      fontWeight: 700,
+    },
+    schneiderLink: { color: "schneider", fontWeight: "700" },
   },
 });
 
