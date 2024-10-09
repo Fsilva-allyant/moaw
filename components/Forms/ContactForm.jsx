@@ -9,6 +9,8 @@ import {
   VStack,
   Stack,
   VisuallyHidden,
+  Image,
+  Box,
 } from "@chakra-ui/react";
 import { MdPhone, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import SocialMediaLinks from "../SocialMediaLinks";
@@ -81,17 +83,26 @@ export default function Contact() {
           </VStack>
           <SocialMediaLinks />
         </Stack>
-        <Stack bg="white" borderRadius="lg" width="40%" color="#0B0E3F">
-          <VStack spacing={5} m={8}>
-            <p>
-              <Text as="span" color="red.onLight">
-                *
-              </Text>{" "}
-              indicates a required field
-            </p>
-            <Form />
-          </VStack>
-        </Stack>
+        <Box borderRadius="lg" width="40%">
+          <Image
+            src={"/moaw_light.png"}
+            alt="Museum of Accessibility Woes"
+            width="50%"
+            margin="auto"
+            padding="0 0 1rem"
+          />
+          <Stack bg="white" color="#0B0E3F">
+            <VStack spacing={5} m={8}>
+              <p>
+                <Text as="span" color="red.onLight">
+                  *
+                </Text>{" "}
+                indicates a required field
+              </p>
+              <Form />
+            </VStack>
+          </Stack>
+        </Box>
       </Flex>
     </Container>
   );

@@ -1,18 +1,31 @@
 "use client";
 import { Button } from "@chakra-ui/react";
+import { usePathname } from "next/navigation";
 
 import MenuItemsNA from "./MenuItemsNA";
-import { menuItemsData } from "@/common/menuItemsData";
+import { menuItemsDataNA } from "@/common/menuItemsDataNA";
+import { menuItemsDataSchneider } from "@/common/menuItemsDataSchneider";
+console.log(menuItemsDataNA);
 
 export default function NavbarNA({ theme }) {
+  const isSchneider = usePathname().includes("schneider");
+
   const depthLevel = 0;
   return (
     <nav className="desktop-nav">
-      <ul className="menus">
-        {menuItemsData.map((menu, index) => {
-          return <MenuItemsNA theme={theme} items={menu} key={index} depthLevel={depthLevel} />;
-        })}
-      </ul>
+      {isSchneider ? (
+        <ul className="menus">
+          {menuItemsDataSchneider.map((menu, index) => {
+            return <MenuItemsNA theme={theme} items={menu} key={index} depthLevel={depthLevel} />;
+          })}
+        </ul>
+      ) : (
+        <ul className="menus">
+          {menuItemsDataNA.map((menu, index) => {
+            return <MenuItemsNA theme={theme} items={menu} key={index} depthLevel={depthLevel} />;
+          })}
+        </ul>
+      )}
       <Button
         className="no-focus-indicator"
         _focus={

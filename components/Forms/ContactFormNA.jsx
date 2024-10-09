@@ -9,6 +9,8 @@ import {
   VStack,
   Stack,
   VisuallyHidden,
+  Box,
+  Image,
 } from "@chakra-ui/react";
 import { MdPhone, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import SocialMediaLinks from "../SocialMediaLinks";
@@ -16,6 +18,7 @@ import FormNA from "@/components/Forms/FormNA";
 import { usePathname } from "next/navigation";
 
 export default function Contact({ theme }) {
+  const isSchneider = usePathname().includes("schneider");
   return (
     <Container maxW="full" m="auto" centerContent overflow="hidden">
       <Flex
@@ -77,11 +80,26 @@ export default function Contact({ theme }) {
           </VStack>
           <SocialMediaLinks />
         </Stack>
-        <Stack bg="white" borderRadius="lg" width="40%" color="#0B0E3F">
-          <VStack spacing={5} m={8}>
-            <FormNA theme={theme} />
-          </VStack>
-        </Stack>
+        <Box borderRadius="lg" width="40%">
+          <Image
+            src={isSchneider ? "/schn_light.png" : "/moaw_light.png"}
+            alt="logo"
+            width="50%"
+            margin="auto"
+            padding="0 0 1rem"
+          />
+          <Stack bg="white" color="#0B0E3F">
+            <VStack spacing={5} m={8}>
+              <p>
+                <Text as="span" color="red.onLight">
+                  *
+                </Text>{" "}
+                indicates a required field
+              </p>
+              <FormNA />
+            </VStack>
+          </Stack>
+        </Box>
       </Flex>
     </Container>
   );

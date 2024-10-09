@@ -8,7 +8,6 @@ import DropdownNA from "./DropdownNA";
 import prodUrl from "@/common/prodUrl";
 
 const MenuItemsNA = ({ items, depthLevel, theme }) => {
-  const isSchneider = usePathname().includes("schneider");
   const [dropdown, setDropdown] = useState(false);
   let ref = useRef();
 

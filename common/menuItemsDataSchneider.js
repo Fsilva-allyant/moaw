@@ -1,4 +1,4 @@
-export const menuItemsDataNA = [
+export const menuItemsDataSchneider = [
   {
     title: "Index",
     url: "/",
@@ -32,7 +32,7 @@ export const menuItemsDataNA = [
       {
         title: "Contact Us",
         // subLabel: "",
-        url: "/inaccessible/contact",
+        url: "/schneider/contact",
       },
       {
         title: "Blog",

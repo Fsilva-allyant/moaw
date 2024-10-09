@@ -8,7 +8,7 @@ import BlogCardsNA from "@/components/Cards/BlogCardsNA";
 import HeroFooterNA from "@/components/Hero/HeroFooterNA";
 
 export const metadata = {
-  title: "Museum of Accessibility Woes - Not Accessible Version",
+  title: "Schneider Labs",
   description: "TBD",
   // icons: { icon: "/favicon.svg" },
 };

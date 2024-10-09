@@ -15,8 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { BsPerson } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 export default function HookForm({ theme }) {
+  const isSchneider = usePathname().includes("schneider");
   const {
     handleSubmit,
     register,
@@ -78,16 +80,16 @@ export default function HookForm({ theme }) {
               _placeholder={{ color: "gray.base" }}
             />
           </InputGroup>
-          {/* {errors.email?.type === "required" && (
-            <FormErrorMessage color="red.onLight">
+          {errors.email?.type === "required" && (
+            <FormErrorMessage color="red.onLight" aria-live="off" role="presentation">
               {errors.email && errors.email.message}
             </FormErrorMessage>
-          )} */}
+          )}
         </FormControl>
         <FormControl isInvalid={errors.message}>
           {/* <FormLabel>Message </FormLabel> */}
           <Textarea
-            placeholder="Message"
+            placeholder="Message *"
             {...register("message", {
               required: "Message is required",
             })}
@@ -103,7 +105,8 @@ export default function HookForm({ theme }) {
           )} */}
         </FormControl>
         <Button
-          backgroundColor={"schneider"}
+          backgroundColor={isSchneider ? "schneider" : "blue.bold"}
+          variant={!isSchneider ? "blue" : ""}
           isLoading={isSubmitting}
           _focus={{ outlineColor: theme ? `${theme} !important` : "blue.base !important" }}
           type="submit"

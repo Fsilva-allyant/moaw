@@ -22,7 +22,6 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 export default function FooterNA({ props }) {
-  console.log(props.teme);
   return (
     <Box as="footer" bg="blue.bold" color="white">
       <Stack
@@ -36,7 +35,7 @@ export default function FooterNA({ props }) {
       >
         <Link
           _focus={{
-            outline: props.theme ? `3px solid ${props.theme}` : "3px solid blue.base",
+            outline: props?.theme ? `3px solid ${props?.theme}` : "3px solid blue.base",
             outlineOffset: "2px",
           }}
           href={prodUrl("/")}
